@@ -1,130 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mohamed A. Mohamed | Cloud & DevSecOps Engineer</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1120;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      color: #60a5fa;
-      margin-top: 50px;
-    }
-
-    p {
-      color: #cbd5e1;
-    }
-
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-      margin-right: 18px;
-    }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid #334155;
-      padding: 7px 12px;
-      margin: 5px;
-      border-radius: 6px;
-      background: #111827;
-    }
-
-    .project {
-      margin: 25px 0;
-      padding: 20px;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      background: #111827;
-    }
-  </style>
+  <meta name="description" content="Mohamed A. Mohamed, Infrastructure, Cloud and Platform Engineer building secure, automated cloud platforms.">
+  <title>Mohamed A. Mohamed | Infrastructure, Cloud & Platform Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <main class="container">
-
-    <h1>Mohamed A. Mohamed</h1>
-
-    <p>
-      Cloud, DevSecOps, and Platform Engineer focused on secure infrastructure,
-      Kubernetes, automation, cloud security, and AI platform engineering.
-    </p>
-
-    <p>
-      <a href="https://github.com/SecureCloudOps">GitHub</a>
-      <a href="https://linkedin.com/in/mohamed007-cloud">LinkedIn</a>
-      <a href="mailto:mohamed0395@gmail.com">Email</a>
-    </p>
-
-    <h2>Core Skills</h2>
-
-    <div>
-      <span class="tag">AWS</span>
-      <span class="tag">Kubernetes</span>
-      <span class="tag">Terraform</span>
-      <span class="tag">GitHub Actions</span>
-      <span class="tag">DevSecOps</span>
-      <span class="tag">Python</span>
-      <span class="tag">Cloud Security</span>
-      <span class="tag">AI Infrastructure</span>
-    </div>
-
-    <h2>Featured Projects</h2>
-
-    <section class="project">
-      <h3>Secure AI Platform Engineering</h3>
-      <p>
-        A Kubernetes-based internal AI platform with infrastructure as code,
-        secure CI/CD, policy enforcement, observability, and RAG capabilities.
-      </p>
-      <a href="#">View project</a>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top">MAM<span>.</span></a>
+    <nav><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav>
+    <div class="header-actions"><button class="icon-button" id="commandButton" aria-label="Open command palette">⌘K</button><button class="icon-button" id="themeToggle" aria-label="Toggle color theme">☼</button></div>
+  </header>
+  <main id="top">
+    <section class="hero reveal">
+      <div class="status-pill"><span></span> Open to select opportunities</div>
+      <p class="eyebrow">Greater Boston, Massachusetts</p>
+      <h1>Infrastructure that is<br><span>secure by design.</span></h1>
+      <p class="hero-copy">I’m Mohamed A. Mohamed, an Infrastructure, Cloud & Platform Engineer building secure, automated systems across cloud security, DevSecOps, Kubernetes, platform engineering, and AI infrastructure.</p>
+      <div class="hero-actions"><a class="button primary" href="#work">Explore my work</a><button class="button secondary" disabled>My Resume · Soon</button></div>
+      <div class="hero-links"><a href="https://github.com/SecureCloudOps" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/mohamed007-cloud/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:mohamed0395@gmail.com">Email ↗</a></div>
+      <div class="terminal-card">
+        <div class="terminal-top"><span></span><span></span><span></span><p>securecloudops — zsh</p></div>
+        <div class="terminal-body"><p><span class="prompt">$</span> whoami</p><p class="output">Mohamed A. Mohamed</p><p><span class="prompt">$</span> focus --current</p><p class="output typed" data-text="secure platforms · cloud automation · AI infrastructure"></p><p><span class="prompt">$</span> principles</p><p class="output">least privilege / automation first / observable by default</p></div>
+      </div>
     </section>
-
-    <section class="project">
-      <h3>KubeBackup Operator</h3>
-      <p>
-        A Kubernetes operator that automates checksum-verified PostgreSQL
-        backups and restores using MinIO and Amazon S3.
-      </p>
-      <a href="#">View project</a>
+    <section class="signal-strip reveal"><span>Cloud Security</span><span>DevSecOps</span><span>Kubernetes</span><span>Platform Engineering</span><span>AI Infrastructure</span></section>
+    <section id="work" class="section reveal">
+      <div class="section-heading"><div><p class="eyebrow">Selected engineering work</p><h2>Systems built to prove the work.</h2></div><p>Each project is designed around real operational constraints, security controls, repeatability, and evidence.</p></div>
+      <article class="project-card featured">
+        <div class="project-copy"><p class="project-index">01 · AI PLATFORM</p><h3>LLM RAG Infrastructure Platform</h3><p>Production-style AI infrastructure for a FastAPI RAG service with Qdrant, vLLM, Kubernetes, Terraform-managed AWS EKS, GitOps, observability, autoscaling, and automated security scanning.</p><div class="tags"><span>AWS EKS</span><span>Terraform</span><span>Argo CD</span><span>FastAPI</span><span>Qdrant</span><span>vLLM</span></div><a href="https://github.com/SecureCloudOps/llm-rag-infra-platform" target="_blank" rel="noreferrer">View repository ↗</a></div>
+        <div class="architecture-panel"><div class="arch-node user">Client</div><div class="arch-line"></div><div class="arch-node api">FastAPI RAG API</div><div class="arch-grid"><div class="arch-node">Qdrant</div><div class="arch-node">vLLM</div><div class="arch-node">Prometheus</div></div><div class="arch-footer">Kubernetes · GitOps · AWS EKS</div></div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card"><p class="project-index">02 · KUBERNETES OPERATOR</p><h3>KubeBackup Operator</h3><p>A custom Kubernetes operator automating checksum-verified PostgreSQL backup and restore workflows across MinIO and Amazon S3.</p><div class="tags"><span>Go</span><span>Kubernetes</span><span>PostgreSQL</span><span>S3</span><span>Prometheus</span></div><a href="https://github.com/SecureCloudOps/database-backup-operator" target="_blank" rel="noreferrer">View repository ↗</a></article>
+        <article class="project-card"><p class="project-index">03 · DEVSECOPS PLATFORM</p><h3>Secure Kubernetes DevSecOps</h3><p>A secure delivery platform demonstrating CI/CD controls, Kubernetes policy enforcement, infrastructure validation, secrets protection, and observable workloads.</p><div class="tags"><span>GitHub Actions</span><span>Trivy</span><span>Checkov</span><span>Policy as Code</span></div><a href="https://github.com/SecureCloudOps/secure-k8s-devsecops" target="_blank" rel="noreferrer">View repository ↗</a></article>
+      </div>
     </section>
-
-    <section class="project">
-      <h3>LLM RAG Infrastructure Platform</h3>
-      <p>
-        An AWS EKS platform for serving open-source language models with vLLM,
-        Qdrant, FastAPI, Terraform, and Argo CD.
-      </p>
-      <a href="#">View project</a>
-    </section>
-
-    <h2>Certifications</h2>
-
-    <p>
-      AWS Solutions Architect Associate · AWS SysOps Administrator Associate ·
-      Certified Kubernetes Administrator · CompTIA Security+
-    </p>
-
+    <section id="capabilities" class="section reveal"><div class="section-heading"><div><p class="eyebrow">Capabilities</p><h2>Engineering across the platform lifecycle.</h2></div></div><div class="capability-grid"><article><span>01</span><h3>Cloud & Infrastructure</h3><p>AWS architecture, networking, IAM, EKS, Terraform modules, resilient deployment patterns, and cost-aware environments.</p></article><article><span>02</span><h3>DevSecOps & Security</h3><p>Secure CI/CD, software supply-chain controls, policy as code, scanning, secrets protection, and least-privilege design.</p></article><article><span>03</span><h3>Kubernetes & Platforms</h3><p>Cluster operations, GitOps, admission controls, operators, observability, autoscaling, workload isolation, and developer platforms.</p></article><article><span>04</span><h3>AI Infrastructure</h3><p>RAG systems, vector databases, vLLM inference, GPU-aware platform patterns, FastAPI services, and secure AI delivery.</p></article></div></section>
+    <section id="credentials" class="section reveal"><div class="section-heading"><div><p class="eyebrow">Credentials</p><h2>Validated technical foundation.</h2></div></div><div class="credential-list"><a href="https://www.credly.com/badges/cd639be7-63a3-40cc-8c35-55e1ff18717b/public_url" target="_blank" rel="noreferrer"><span>AWS</span><strong>Solutions Architect · Associate</strong><em>Verify ↗</em></a><a href="https://www.credly.com/badges/11c74b83-3679-4748-b4a0-96bb952c44ad/public_url" target="_blank" rel="noreferrer"><span>AWS</span><strong>SysOps Administrator · Associate</strong><em>Verify ↗</em></a><a href="https://www.credly.com/badges/760321ff-dd42-4a98-91de-7d306c99d6ed/public_url" target="_blank" rel="noreferrer"><span>CNCF</span><strong>Certified Kubernetes Administrator</strong><em>Verify ↗</em></a><a href="https://www.credly.com/badges/62d4ead1-fc93-47b1-86c9-804b636e285d/public_url" target="_blank" rel="noreferrer"><span>CompTIA</span><strong>Security+</strong><em>Verify ↗</em></a></div></section>
+    <section id="contact" class="contact-section reveal"><p class="eyebrow">Let’s build reliable systems</p><h2>Have an infrastructure, platform, or security challenge?</h2><p>I’m open to Cloud Security, DevSecOps, Platform Engineering, Cloud Infrastructure, and AI Infrastructure opportunities.</p><div class="contact-actions"><a class="button primary" href="mailto:mohamed0395@gmail.com?subject=Portfolio%20Inquiry">Start a conversation</a><button class="button secondary" id="copyEmail">Copy email</button></div></section>
   </main>
+  <footer><span>© 2026 Mohamed A. Mohamed</span><span>Built with HTML, CSS & JavaScript · Hosted on GitHub Pages</span></footer>
+  <div class="command-overlay" id="commandOverlay" hidden><div class="command-palette" role="dialog"><div class="command-search">Navigate portfolio <kbd>ESC</kbd></div><a href="#work">Projects <span>↵</span></a><a href="#capabilities">Capabilities <span>↵</span></a><a href="#credentials">Credentials <span>↵</span></a><a href="#contact">Contact <span>↵</span></a><a href="https://github.com/SecureCloudOps" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a></div></div>
+  <script src="script.js"></script>
 </body>
 </html>
