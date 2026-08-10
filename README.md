@@ -8,6 +8,12 @@ Personal engineering portfolio for **Mohamed A. Mohamed**, focused on cloud infr
 
 ## Featured Projects
 
+### ForgePath
+
+Flagship secure platform-engineering project that provides a reproducible paved path from Backstage service creation through validation, signed immutable artifacts, GitOps delivery with Argo CD, Kyverno admission control, and read-only runtime feedback.
+
+[View repository](https://github.com/SecureCloudOps/ForgePath)
+
 ### LLM RAG Infrastructure Platform
 
 Production-style AI infrastructure platform using FastAPI, Qdrant, vLLM, Kubernetes, Terraform, AWS EKS, Argo CD, Prometheus, and Grafana.
@@ -19,12 +25,6 @@ Production-style AI infrastructure platform using FastAPI, Qdrant, vLLM, Kuberne
 Kubernetes operator that automates checksum-verified PostgreSQL backups and restores using Amazon S3 or MinIO.
 
 [View repository](https://github.com/SecureCloudOps/database-backup-operator)
-
-### Secure Kubernetes DevSecOps
-
-Secure Kubernetes delivery platform with CI/CD automation, policy enforcement, infrastructure as code, security scanning, and observability.
-
-[View repository](https://github.com/SecureCloudOps/secure-k8s-devsecops)
 
 ## Portfolio Features
 
