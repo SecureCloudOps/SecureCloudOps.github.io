@@ -49,3 +49,32 @@ Kubernetes operator that automates checksum-verified PostgreSQL backups and rest
 - [GitHub](https://github.com/SecureCloudOps)
 - [LinkedIn](https://www.linkedin.com/in/mohamed007-cloud/)
 - [Email](mailto:mohamed0395@gmail.com)
+
+## September 2026 portfolio polish
+
+The one-page layout, dark default, architecture panel and certification links are
+preserved. The update makes the engineering evidence easier to scan:
+
+- Focus the introduction on cloud infrastructure, automation, security and reliability.
+- Feature ForgePath, EKS Operations & Resilience and KubeBackup, with evidence links
+  and explicit controlled-exercise context. Keep AI work accessible in a compact row.
+- Separate seasonal professional systems operations from independent cloud projects.
+- Replace the overlapping absolute-positioned terminal layout with a responsive grid.
+- Keep navigation and content usable without JavaScript; add a native modal menu,
+  keyboard focus handling, a skip link, reduced-motion support and copy feedback.
+- Improve light-theme contrast and add canonical/social metadata and an SVG favicon.
+
+### Local preview
+
+Run `python -m http.server 8765` from the repository root and open
+`http://localhost:8765`. No package installation or build step is required.
+
+### Review checklist
+
+Check desktop and narrow layouts, dark/light themes, navigation with Tab and Escape,
+section links, résumé access, copy-email feedback, and content with JavaScript disabled.
+Run `node --check script.js` and `git diff --check` before publishing.
+
+Project measurements are dated lab observations, not production availability claims.
+The existing résumé PDF remains the downloadable résumé; updating it is a separate
+content task.
