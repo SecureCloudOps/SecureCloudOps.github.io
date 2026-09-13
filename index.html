@@ -17,6 +17,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260913">
+  <style>
+    .engineering-notes{margin:22px 0;border-top:1px solid var(--line);padding-top:16px;font-size:.88rem}
+    .featured>.engineering-notes{grid-column:1/-1;margin:0}
+    .engineering-notes summary{cursor:pointer;color:var(--text);font-weight:600;padding:6px 0}
+    .engineering-notes dl{margin:16px 0 0}
+    .engineering-notes dt{color:var(--accent);font-weight:600;margin-top:14px}
+    .engineering-notes dd{color:var(--muted);margin:4px 0 0;line-height:1.75;max-width:85ch}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -44,7 +52,8 @@
       <div class="section-heading"><div><p class="eyebrow">Selected engineering work</p><h2>Selected work. Measurable results.</h2></div><p>Independent engineering projects with documented tests, operational tradeoffs, and inspectable evidence. Measurements below come from controlled lab exercises.</p></div>
       <article class="project-card featured">
         <div class="project-copy"><p class="project-index">01 · FLAGSHIP PLATFORM</p><h3>ForgePath</h3><p>A secure platform-engineering paved path that takes a developer from Backstage service creation through validation, signed immutable artifacts, GitOps delivery, Kyverno admission, and read-only runtime feedback.</p><div class="project-proof"><strong>5% canary exposure · 375s recovery</strong><span>Recorded local incident exercise; human-approved Git recovery.</span></div><div class="tags"><span>Backstage</span><span>Argo CD</span><span>Kyverno</span><span>OPA</span><span>Helm</span><span>Supply Chain Security</span></div><div class="project-links"><a href="https://github.com/SecureCloudOps/ForgePath/blob/main/docs/evidence/README.md" target="_blank" rel="noreferrer">Review evidence ↗</a><a href="https://github.com/SecureCloudOps/ForgePath" target="_blank" rel="noreferrer">Source code ↗</a></div></div>
-        <div class="architecture-panel"><div class="arch-node user">Developer</div><div class="arch-line"></div><div class="arch-node api">Backstage Paved Path</div><div class="arch-grid"><div class="arch-node">Policy + Scans</div><div class="arch-node">Signed OCI + SBOM</div><div class="arch-node">Argo CD + Kyverno</div></div><div class="arch-footer">Self-service · Immutable artifacts · GitOps · Runtime evidence</div></div>
+        <div class="architecture-panel"><div class="arch-node user">Developer</div><div class="arch-line"></div><div class="arch-node api">Backstage Paved Path</div><div class="arch-grid"><div class="arch-node">Policy + Scans</div><div class="arch-node">Signed OCI + SBOM</div><div class="arch-node">Argo CD + Kyverno</div></div><div class="arch-footer">Self-service · Immutable artifacts · GitOps · Runtime evidence</div></div><details class="engineering-notes"><summary>Decisions, failures &amp; limitations</summary><dl><dt>Decisions</dt><dd>Git is the only delivery control plane; Backstage starts service creation and exposes read-only runtime feedback.</dd><dt>Failures</dt><dd>A deliberately defective canary reached 5% exposure; recovery took 375 seconds through a human-approved Git change.</dd><dt>Limitations</dt><dd>One service in a disposable local environment. Multi-cluster operations, regional traffic, and production paging remain unproven.</dd></dl></details>
+
       </article>
       <div class="project-grid">
         <article class="project-card">
@@ -52,6 +61,7 @@
           <p>Staged cluster upgrades, diagnosed blocked drains and ingress failures, and narrowed workload IAM permissions on a Terraform-managed AWS environment.</p>
           <div class="project-proof"><strong>26,611 requests during upgrade</strong><span>9 HTTP failures recorded. A separate follow-up drain recorded zero failures across 4,030 requests.</span></div>
           <div class="tags"><span>AWS EKS</span><span>Terraform</span><span>Bottlerocket</span><span>Prometheus</span><span>IAM</span></div>
+<details class="engineering-notes"><summary>Decisions, failures &amp; limitations</summary><dl><dt>Decisions</dt><dd>Separated application, system, and canary node groups to stage upgrades. A single NAT gateway kept lab costs down.</dd><dt>Failures</dt><dd>The upgrade recorded 9 HTTP 502s. Readiness gates and spare capacity were followed by a separate drain test with zero observed failures.</dd><dt>Limitations</dt><dd>The full upgrade was not repeated after remediation. A single NAT gateway and system node limit availability; results are dated lab observations.</dd></dl></details>
           <div class="project-links"><a href="https://github.com/SecureCloudOps/eks-production-operations-lab/blob/main/evidence/README.md" target="_blank" rel="noreferrer">Review lab results ↗</a><a href="https://github.com/SecureCloudOps/eks-production-operations-lab" target="_blank" rel="noreferrer">Source code ↗</a></div>
         </article>
         <article class="project-card">
@@ -59,6 +69,7 @@
           <p>Declarative PostgreSQL backup and restore workflows that verify data integrity, reject corrupted restores, and expose recovery health through Prometheus.</p>
           <div class="project-proof"><strong>21 controller specs · 3 Kind E2E specs</strong><span>Recorded validation includes checksum verification and exact restored-record comparisons.</span></div>
           <div class="tags"><span>Go</span><span>Kubernetes</span><span>PostgreSQL</span><span>S3 / MinIO</span><span>Prometheus</span></div>
+<details class="engineering-notes"><summary>Decisions, failures &amp; limitations</summary><dl><dt>Decisions</dt><dd>Used Kubernetes custom resources and Jobs to make recovery declarative, with checksum verification before restoring data.</dd><dt>Failure handling</dt><dd>Documented failure handling stops checksum-mismatched restores. Failed operations require corrected inputs and a new resource, preserving the original failure record.</dd><dt>Limitations</dt><dd>Validation covers controlled Kind and S3-compatible restore paths. It does not establish production recovery-time or recovery-point guarantees.</dd></dl></details>
           <div class="project-links"><a href="https://github.com/SecureCloudOps/database-backup-operator#validation-evidence" target="_blank" rel="noreferrer">Review validation ↗</a><a href="https://github.com/SecureCloudOps/database-backup-operator" target="_blank" rel="noreferrer">Source code ↗</a></div>
         </article>
       </div>
